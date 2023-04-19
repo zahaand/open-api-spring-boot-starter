@@ -1,0 +1,4 @@
+swagger:
+  title: @project.name@
+  description: @project.description@
+  version: @project.version@
