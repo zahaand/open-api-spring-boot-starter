@@ -4,10 +4,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.10</version>
-        <relativePath/>
+        <groupId>ru.mkskom</groupId>
+        <artifactId>mso-parent</artifactId>
+        <version>1.1</version>
     </parent>
 
     <groupId>ru.mkskom</groupId>
@@ -25,19 +24,16 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
             <optional>true</optional>
         </dependency>
-
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-ui</artifactId>
             <version>1.7.0</version>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -52,7 +48,6 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
-
         <resources>
             <resource>
                 <filtering>true</filtering>
@@ -63,5 +58,27 @@
             </resource>
         </resources>
     </build>
+
+    <repositories>
+        <repository>
+            <id>mso-releases</id>
+            <url>https://nexus.mkskom.ru/repository/mso-releases/</url>
+        </repository>
+        <repository>
+            <id>mso-snapshot</id>
+            <url>https://nexus.mkskom.ru/repository/mso-snapshot/</url>
+        </repository>
+    </repositories>
+
+    <distributionManagement>
+        <repository>
+            <id>mso-releases</id>
+            <url>https://nexus.mkskom.ru/repository/mso-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>mso-snapshot</id>
+            <url>https://nexus.mkskom.ru/repository/mso-snapshot/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
 </project>
